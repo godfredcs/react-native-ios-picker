@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sanpyaelin/react-native-ios-picker.git"
+    "url": "git+https://github.com/godfredcs/react-native-ios-picker.git"
   },
   "keywords": [
     "react",
@@ -18,13 +18,13 @@
     "collapse",
     "modal"
   ],
-  "author": "San Pyae Lin",
+  "author": "godfredcs <addaiz.godfred@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sanpyaelin/react-native-ios-picker/issues"
+    "url": "https://github.com/godfredcs/react-native-ios-picker/issues"
   },
   "dependencies": {
     "react-native-collapse-view": "1.0.0"
   },
-  "homepage": "https://github.com/sanpyaelin/react-native-ios-picker#readme"
+  "homepage": "https://github.com/godfredcs/react-native-ios-picker#readme"
 }

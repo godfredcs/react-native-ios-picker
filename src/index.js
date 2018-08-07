@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React from 'react';
 import CollapseView from 'react-native-collapse-view';
-import { Text, View, TouchableOpacity , StyleSheet, PickerIOS, Modal } from 'react-native';
+import {Text, View, TouchableOpacity , StyleSheet, PickerIOS, Modal} from 'react-native';
 
 const propTypes = {
   mode: PropTypes.string,
@@ -66,10 +66,10 @@ class IOSPicker extends Component {
   renderCollapseView = () => {
     return (
       <View style={this.props.collapseViewStyle}>
-        <PickerIOS 
+        <PickerIOS
           selectedValue={this.state.selected}
           onValueChange={this.valueChange}>
-          { 
+          {
             this.props.data && this.props.data.map((d)=>
               <PickerIOS.Item style={this.props.pickerItemStyle} key={d} label={d} value={d} />
             )
@@ -82,7 +82,7 @@ class IOSPicker extends Component {
 
   renderCollapsePicker() {
     return (
-      <CollapseView 
+      <CollapseView
         renderView={this.renderView}
         renderCollapseView={this.renderCollapseView}
       />
@@ -93,7 +93,7 @@ class IOSPicker extends Component {
     const { style, textStyle } = this.props;
     return (
     <View>
-      <TouchableOpacity 
+      <TouchableOpacity
         activeOpacity={0.5}
         onPress={this.pressItem}
         style={[defaultStyles.container,style]}
@@ -105,7 +105,7 @@ class IOSPicker extends Component {
     </View>
     )
   }
-  
+
   render = () => {
     const { children, data, style, textStyle, pickerStyle, pickerItemStyle, disabled, mode} = this.props;
     return (
@@ -113,10 +113,10 @@ class IOSPicker extends Component {
       <Modal transparent visible={this.state.modalVisible} animationType='fade'>
         <TouchableOpacity activeOpacity={1} onPress={() => this.setState({modalVisible:false})} style={defaultStyles.overlay}>
           <View style={defaultStyles.picker}>
-            <PickerIOS 
+            <PickerIOS
               selectedValue={this.state.selected}
               onValueChange={this.valueChange}>
-              { 
+              {
                 data && data.map((d)=>
                   <PickerIOS.Item style={pickerItemStyle} key={d} label={d} value={d} />
                 )
